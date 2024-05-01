@@ -70,8 +70,14 @@
             username: document.getElementById("username").value,
             email: document.getElementById("email").value,
             password: document.getElementById("password").value
+        }).then(() => {
+            // After successful registration, redirect to sample.html
+            alert("registered successfully");
+            window.location.href = "sample.html";
+        }).catch((error) => {
+            console.error("Error registering user: ", error);
+            // Handle error here, you can display an alert or any other error message to the user.
         });
-        alert("login successful");
     });
 
 </script>

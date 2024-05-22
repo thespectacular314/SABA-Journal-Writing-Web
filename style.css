@@ -617,3 +617,11 @@ footer .cols .news-col form button i{
     opacity: 1;
 }
 
+.links-col a {
+    transition: color 2s ease-in-out, transform 2s ease-in-out;
+  }
+  
+  .links-col a:hover {
+    color: #ffb742 !important;
+    transform: scale(1.2);
+  }

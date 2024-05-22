@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Layout Example</title>
+    <link rel="stylesheet" href="writingPage.css">
+    
+</head>
+<body>
+    <div class="container">
+        <div class="header"></div>
+        <div class="content">
+            <div class="sidebar">
+                <div class="add-new">
+                    <div class="add-icon">+</div>
+                </div>
+            </div>
+            <div class="main-content">
+                <!-- Include stylesheet -->
+                <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0/dist/quill.snow.css" rel="stylesheet" />
+
+                <!-- Create the editor container -->
+                <div id="editor">
+                </div>
+
+                <!-- Include the Quill library -->
+                <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0/dist/quill.js"></script>
+
+                <!-- Initialize Quill editor -->
+                <script>
+                const quill = new Quill('#editor', {
+                    theme: 'snow'
+                });
+                </script>
+            </div>
+        </div>
+    </div>
+    <script src="writingPage.js" defer></script>
+</body>
+</html>

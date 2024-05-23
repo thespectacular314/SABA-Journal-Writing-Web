@@ -15,7 +15,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
         const closeButton = document.createElement('span');
         closeButton.classList.add('tab-close');
-        closeButton.textContent = 'x';
+        closeButton.textContent = 'X';
         closeButton.addEventListener('click', function() {
             removeTab(newTab);
         });

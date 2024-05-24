@@ -24,7 +24,8 @@ document.addEventListener('DOMContentLoaded', function() {
         const newEditor = document.createElement('div');
         newEditor.classList.add('editor');
         const newQuill = new Quill(newEditor, {
-            theme: 'snow'
+            theme: 'snow',
+            scrollingContainer: '.editor-container' 
         });
 
         newTab.addEventListener('click', function() {

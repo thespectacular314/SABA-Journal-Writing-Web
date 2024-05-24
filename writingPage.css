@@ -22,6 +22,7 @@ body {
     z-index: -1;
 
 }
+
 .container {
     display: flex;
     flex-direction: column;
@@ -114,12 +115,12 @@ body {
 .editor-container {
     height: 93%;
     font-size: 20px;
-    color: #fc9904;
+    color: #ffffff;
     padding: 2%;
     border-radius: 20px;
-    backdrop-filter: blur(20px);
-    background-color: rgba(255, 255, 255, 0.164);
-}
+    backdrop-filter: blur(10px);
+    background-color: rgba(255, 255, 255, 0.096);
+}   
 
 .editor-container:hover {
     box-shadow: 0 0 9px #ffbb00;

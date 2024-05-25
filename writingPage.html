@@ -12,6 +12,8 @@
     <div class="container">
         <div class="header">
             <h2>SABA</h2>
+            <button id="greeting" class="greeting-button"></button> <!-- Add this div to display the greeting -->
+
         </div>
         <div class="content">
             <div class="sidebar">
@@ -26,6 +28,19 @@
             </div>
         </div>
     </div>
+    <script>
+        // Retrieve the username from localStorage
+        document.addEventListener('DOMContentLoaded', function() {
+            const username = localStorage.getItem('username');
+            const greetingButton = document.getElementById('greeting');
+            if (username) {
+                greetingButton.textContent = `Hi ${username}`;
+            } else {
+                greetingButton.textContent = "Hi Guest";
+            }
+        });
+    </script>
     <script src="JS/writingPage.js" defer></script>
+    
 </body>
 </html>

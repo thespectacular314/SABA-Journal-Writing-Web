@@ -70,7 +70,15 @@
                     const users = snapshot.val();
     
                     // Check if user with provided email exists
-                    const user = Object.values(users).find(user => user.email === email);
+
+                    // const user = Object.values(users).find(user => user.email === email);
+                    let user = null;
+                    for (const key in users) {
+                        if (users[key].email === email) {
+                            user = users[key];
+                            break;
+                        }
+                    }
                     if (!user) {
                         throw new Error("User not found");
                     }
@@ -78,6 +86,8 @@
                     // Check if password matches
                     if (user.password === password) {
                         alert("Sign in successful!");
+                        const username = user.username;  // Store the username in a variable
+                        localStorage.setItem('username', username); 
                         window.location.href = "main-logged.html";
                         // Redirect or do other actions here
                     } else {

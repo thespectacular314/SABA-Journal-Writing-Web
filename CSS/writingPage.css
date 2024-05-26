@@ -21,7 +21,7 @@ body {
     filter: blur(4px) brightness(0.6);
     z-index: -1;
 
-}
+}   
 
 .container {
     display: flex;

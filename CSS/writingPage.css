@@ -163,7 +163,7 @@ button.greeting-button {
     background-color: #fff;
     border: none;
     border-radius: 45px;
-    box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+    box-shadow: 0px 8px 15px rgba(59, 131, 77, 0.1);
     transition: all 0.3s ease 0s;
     cursor: pointer;
     outline: none;
@@ -175,7 +175,7 @@ button.greeting-button {
 
 button.greeting-button:hover {
     background-color: #FFB742;
-    box-shadow: 0px 15px 20px rgba(46, 229, 157, 0.4);
+    box-shadow: rgba(46, 229, 157, 0.4) 0px 9px 38px, rgba(46, 229, 157, 0.4) 0px 5px 4px;
     color: #fff;
     /* Remove transform property */
 }

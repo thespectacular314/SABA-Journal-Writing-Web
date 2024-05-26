@@ -1,46 +1,47 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Layout Example</title>
-    <link rel="stylesheet" href="CSS/writingPage.css">
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0/dist/quill.snow.css" rel="stylesheet">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Layout Example</title>
+  <link rel="stylesheet" href="CSS/writingPage.css">
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+  <link href="https://cdn.jsdelivr.net/npm/quill@2.0.0/dist/quill.snow.css" rel="stylesheet">
 </head>
 <body>
-    <div class="bg"></div>
-    <div class="container">
-        <div class="header">
-            <h2>SABA</h2>
-            <button id="greeting" class="greeting-button"></button> <!-- Add this div to display the greeting -->
-
-        </div>
-        <div class="content">
-            <div class="sidebar">
-                <div class="add-new">
-                    <center><i class="bi bi-plus-square-fill"></i></center>
-                </div>
-            </div>
-            <div class="main-content">
-                <div class="editor-container" id="editor-container"></div>
-                <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0/dist/quill.js"></script>
-            </div>
-        </div>
+  <div class="bg"></div>
+  <div class="container">
+    <div class="header">
+      <h2>SABA</h2>
+      <div class="randomQuotes">Have a good Writing!!</div>
+      <button id="greeting" class="greeting-button"></button>
     </div>
-    <script>
-        // Retrieve the username from localStorage
-        document.addEventListener('DOMContentLoaded', function() {
-            const username = localStorage.getItem('username');
-            const greetingButton = document.getElementById('greeting');
-            if (username) {
-                greetingButton.textContent = `Hi ${username}`;
-            } else {
-                greetingButton.textContent = "Hi Guest";
-            }
-        });
-    </script>
-    <script src="JS/writingPage.js" defer></script>
-    
+    <div class="content">
+      <div class="sidebar">
+        <div class="add-new">
+          <center><i class="bi bi-plus-square-fill"></i></center>
+        </div>
+      </div>
+      <div class="main-content">
+        <div class="editor-container" id="editor-container"></div>
+        <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0/dist/quill.js"></script>
+      </div>
+    </div>
+  </div>
+  <script>
+    // Retrieve the username from localStorage
+    document.addEventListener('DOMContentLoaded', function() {
+      const username = localStorage.getItem('username');
+      const greetingButton = document.getElementById('greeting');
+      if (username) {
+        greetingButton.textContent = `Hi ${username}`;
+      } else {
+        greetingButton.textContent = "Hi Guest";
+      }
+  
+    });
+  </script>
+  
+  <script src="JS/writingPage.js" defer></script>
 </body>
 </html>

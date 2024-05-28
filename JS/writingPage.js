@@ -35,35 +35,39 @@ document.addEventListener('DOMContentLoaded', function() {
     function createNewTab() {
         const newTab = document.createElement('div');
         newTab.classList.add('tab');
-        newTab.textContent = `New Tab ${++tabCount}`;
-
+        const date = new Date();
+        const dateString = date.toLocaleString();
+        newTab.textContent = `${dateString}`;
+    
         const closeButton = document.createElement('span');
         closeButton.classList.add('tab-close');
-        closeButton.textContent = 'X';
+    
+        // Create the Bootstrap icon and append it to the closeButton
+        const closeIcon = document.createElement('i');
+        closeIcon.classList.add('bi', 'bi-x');
+        closeButton.appendChild(closeIcon);
+    
         closeButton.addEventListener('click', function() {
             removeTab(newTab);
         });
         newTab.appendChild(closeButton);
-
+    
         const newEditor = document.createElement('div');
         newEditor.classList.add('editor');
         const newQuill = new Quill(newEditor, {
             theme: 'snow',
             scrollingContainer: '.editor-container'
         });
-
+    
         newTab.addEventListener('click', function() {
             switchTab(newTab, newQuill);
         });
-
-        newTab.addEventListener('dblclick', function(event) {
-            renameTab(event.target, newTab);
-        });
-
+    
+        
+    
         sidebar.insertBefore(newTab, addNewIcon);
         tabs.push({ tab: newTab, editor: newQuill, content: '', randomQuotes: generateRandomQuote()});
-  
-
+    
         if (currentTabIndex === -1) {
             switchTab(newTab, newQuill);
         } 
@@ -71,6 +75,7 @@ document.addEventListener('DOMContentLoaded', function() {
             switchTab(tabs[currentTabIndex].tab, tabs[currentTabIndex].editor);
         }
     }
+    
 
 
     function switchTab(tab, editor) {
@@ -114,6 +119,7 @@ document.addEventListener('DOMContentLoaded', function() {
             }
         }
     }
+
 });
 
 

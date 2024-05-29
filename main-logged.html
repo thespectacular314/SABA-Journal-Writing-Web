@@ -195,7 +195,7 @@
         
         aboutLink.addEventListener('click', (event) => {
           event.preventDefault(); // Prevent the default link behavior
-          aboutSection.scrollIntoView({ behavior: 'smooth' });
+          aboutSection.scrollIntoView({ behavior: 'smooth',block: "end", inline: "nearest" });
         });
     </script>
 

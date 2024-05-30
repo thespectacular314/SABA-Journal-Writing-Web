@@ -25,8 +25,10 @@
         <p class="title">To Level Up your Experience of <mark>Journaling</mark></p>
         <p class="subtitle">From Amrita Vishwa Vidyapeetham</p>
         <div class="resiae">
-            <img src="Image_Source/SABA_Logo.jpg" class="my_new_img" style="border-radius: 50px;">
+            <a href="writingPage.html"> <img src="Image_Source/SABA_Logo.jpg" class="my_new_img" style="border-radius: 50px;"></a>
         </div>
+        <br>
+        <h4 id="animated-text" style="font-size: 32px;color: #ffb742;font-weight: 600;">Start Writing</h4>
     </div>
 
 
@@ -85,7 +87,7 @@
                     SaBa is a modern journaling website designed to help users seamlessly capture their thoughts, ideas, and daily experiences. With an intuitive interface and robust features, SaBa makes journaling easier and more enjoyable, encouraging users to maintain a consistent journaling habit.
                 </p>
             </div>
-            <a href="writingPage.html"><button class="hire-btn">Start Writing</button></a>
+            <!-- <a href="writingPage.html"><button class="hire-btn">Start Writing</button></a> -->
         </div>
 
         <div class="right">
@@ -197,6 +199,15 @@
           event.preventDefault(); // Prevent the default link behavior
           aboutSection.scrollIntoView({ behavior: 'smooth',block: "end", inline: "nearest" });
         });
+        
+        const animatedText = document.getElementById('animated-text');
+        let dots = 0;
+
+        setInterval(() => {
+            dots = (dots + 1) % 4;
+            let dotsText = '.'.repeat(dots);
+            animatedText.textContent = `Start Writing${dotsText}`;
+        }, 700);
     </script>
 
 

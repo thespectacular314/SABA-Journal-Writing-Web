@@ -10,24 +10,33 @@
 </head>
 <body>
   <div class="bg"></div>
+
   <div class="container">
+    
     <div class="header">
-      <h2>SABA</h2>
+      <h2><a href="main-logged.html">SABA</a></h2>
       <div class="randomQuotes">Have a good Writing!!</div>
+      <div class="dropDown-menu">
+        <a href="login.html">Sign Out</a> 
+      </div>
       <button id="greeting" class="greeting-button"></button>
     </div>
+
     <div class="content">
       <div class="sidebar">
         <div class="add-new">
           <center><i class="bi bi-plus-square-fill"></i></center>
         </div>
       </div>
+
       <div class="main-content">
         <div class="editor-container" id="editor-container"></div>
         <script src="https://cdn.jsdelivr.net/npm/quill@2.0.0/dist/quill.js"></script>
       </div>
+
     </div>
   </div>
+
   <script>
     // Retrieve the username from localStorage
     document.addEventListener('DOMContentLoaded', function() {
@@ -35,7 +44,8 @@
       const greetingButton = document.getElementById('greeting');
       if (username) {
         greetingButton.textContent = `Hi ${username}`;
-      } else {
+      } 
+      else {
         greetingButton.textContent = "Hi Guest";
       }
   

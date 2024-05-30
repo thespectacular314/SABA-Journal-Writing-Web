@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap');
 
-*{
+* {
     font-family: 'Poppins', sans-serif;
 }
 
@@ -40,10 +40,15 @@ body {
     border-radius: 10px;
 }
 
+h2 a {
+    text-decoration: none;
+    color: #ffb742;
+}
+
 .content {
     display: flex;
     flex-grow: 1;
-    height: 100%; /* Added height: 100% */
+    height: 100%;
 }
 
 .main-content {
@@ -53,8 +58,7 @@ body {
     padding-left: 2%;
     padding-right: 2%;
     padding-bottom: 2%;
-    height: 100%; /* Added height: 100% */
-    overflow: auto; /* Added overflow: auto */
+    height: 100%;
 }
 
 .sidebar {
@@ -127,18 +131,18 @@ body {
     font-weight: bold;
     font-style: italic;
     background: linear-gradient(90deg, #f6d365, #fda085 );
-    -webkit-background-clip: text;
+    background-clip: text;
     color: transparent;
 }
 
 .editor-container {
+    position: relative;
     font-size: 20px;
     color: #ffffff;
     padding: 2%;
     border-radius: 20px;
     backdrop-filter: blur(10px);
     background-color: rgba(255, 255, 255, 0.096);
-    /* Remove the height property */
 }  
 
 .editor-container:hover {
@@ -178,22 +182,51 @@ button.greeting-button {
     cursor: pointer;
     outline: none;
     position: absolute;
-    right: 20px;
-    top: 50%;
-    transform: translateY(-50%);
+    right: 3%;
+    top: 23%;
+    transform: translateX(20%);
 }
 
 button.greeting-button:hover {
     background-color: #FFB742;
     box-shadow: rgba(46, 229, 157, 0.4) 0px 9px 38px, rgba(46, 229, 157, 0.4) 0px 5px 4px;
     color: #fff;
-    /* Remove transform property */
 }
 
 button.greeting-button:active {
-    transform: translateY(-1px);
+    transform: translateX(0.5px);
 }
 
+.dropDown-menu {
+    padding: 0.5%;
+    margin-right: 13%;
+    margin-top: 0.2%;
+    height: 30%;
+    width: 7%;
+    background-color: white;
+    border-radius: 30px;
+    text-align: center;
+    visibility: hidden;
+    transition: all 0.3s ease 0s; 
+    opacity: 0; 
+    cursor: pointer;
+}
+
+.dropDown-menu:hover {
+    background: #FFB742;
+    transition: 0.3s;
+}
+
+.dropDown-menu a {
+    text-decoration: none;
+    color: black;
+}
+
+
+.dropDown-menu.active {
+    visibility: visible;
+    opacity: 1;
+}
 
 
 /* Additional CSS for responsiveness */

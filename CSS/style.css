@@ -608,7 +608,7 @@ footer .cols .news-col form button i{
 
 }
 /* Add CSS for the fade-in effect */
-.fade-in {
+/* .fade-in {
     opacity: 0;
     transition: opacity 1.2s ease-in-out;
 }
@@ -624,4 +624,4 @@ footer .cols .news-col form button i{
   .links-col a:hover {
     color: #ffb742 !important;
     transform: scale(1.2);
-  }
+  } */

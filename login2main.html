@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Signing Out...</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f8f9fa;
+            font-family: 'Poppins', sans-serif;
+        }
+        .spinner-grow {
+            width: 5rem;
+            height: 5rem;
+            margin-bottom: 20px;
+        }
+        .message {
+            font-size: 1.5rem;
+            font-weight: 600;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="spinner-grow" role="status">
+        <span class="sr-only">Loading...</span>
+    </div>
+    <div class="message">Hang on....We've got you 🤝</div>
+
+    <script>
+        setTimeout(function() {
+            window.location.href = 'main-logged.html';
+        }, 2500);
+    </script>
+</body>
+
+</html>

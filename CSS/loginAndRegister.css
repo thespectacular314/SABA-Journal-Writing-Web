@@ -12,7 +12,8 @@ body {
     min-height: 100vh;
     background: none;
     overflow: hidden;
-    background-color: #212529 ;
+    background-color: #212529;
+    background-color: #212529;
 
 }
 
@@ -161,3 +162,4 @@ body {
     text-decoration: underline;
 
 }
+

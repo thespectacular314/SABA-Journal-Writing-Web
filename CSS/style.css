@@ -240,7 +240,7 @@ body{
     gap: 10%;
     padding: 1%;
     background-color: rgba(128, 128, 128, 0.219);
-    border-radius: 5%;
+    border-radius: 20px;
     width: 40%;
     height: 20%;
     overflow: hidden;
@@ -282,6 +282,12 @@ body{
     display: flex;
     justify-content: space-around;
     padding: 2%;
+    background-color: rgba(128, 128, 128, 0.219);
+    border-radius: 30px;
+    width: 97%;
+    /* max-width: fit-content; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skills .left{
@@ -318,8 +324,10 @@ body{
     align-items: center;
     justify-content: center;
     background: #383e45;
-    width: 50px;
-    height: 50px;
+    margin-top: 27%;
+    padding: 8%;
+    width: 15%;
+    height: 30%;
     border-radius: 10px;
 }
 
@@ -635,6 +643,7 @@ footer .cols .news-col form button i{
     }
 
 }
+
 /* Add CSS for the fade-in effect */
 /* .fade-in {
     opacity: 0;
@@ -649,7 +658,7 @@ footer .cols .news-col form button i{
     transition: color 2s ease-in-out, transform 2s ease-in-out;
   }
   
-  .links-col a:hover {
+.links-col a:hover {
     color: #ffb742 !important;
     transform: scale(1.2);
-  } */
+} */

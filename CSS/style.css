@@ -240,7 +240,7 @@ body{
     gap: 10%;
     padding: 1%;
     background-color: rgba(128, 128, 128, 0.219);
-    border-radius: 5%;
+    border-radius: 20px;
     width: 40%;
     height: 20%;
     overflow: hidden;
@@ -257,8 +257,12 @@ body{
     width: 35%;
     height: 35%;
 }
-.about .info {
+.about {
     text-align: center;
+    transition: box-shadow 0.3s;
+}
+.about:hover {
+    box-shadow: 0 0 12px rgba(177, 144, 1, 0.5); /* Add shadow when hovering */
 }
 
 .about .info h3{
@@ -282,6 +286,12 @@ body{
     display: flex;
     justify-content: space-around;
     padding: 2%;
+    background-color: rgba(128, 128, 128, 0.219);
+    border-radius: 30px;
+    width: 97%;
+    /* max-width: fit-content; */
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .skills .left{
@@ -318,8 +328,10 @@ body{
     align-items: center;
     justify-content: center;
     background: #383e45;
-    width: 50px;
-    height: 50px;
+    margin-top: 27%;
+    padding: 8%;
+    width: 15%;
+    height: 30%;
     border-radius: 10px;
 }
 
@@ -457,184 +469,119 @@ footer .cols .news-col form button i{
     font-size: 26px;
 }
 
-@media screen and (max-width: 1100px) {
-    .guarantee{
-        flex-wrap: wrap;
-        gap: 10px;
+/* Media Queries for Smaller Screens */
+@media (max-width: 768px) {
+    .navbar {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+        height: auto;
     }
 
-    .guarantee .item{
-        flex-basis: 49%;
+    .navbar ul {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .skills{
-        justify-content: space-between;
-        gap: 20px;
+    .navbar ul li a {
+        margin-bottom: 10px;
+        margin-right: 0;
     }
 
-    .skills .left{
-        width: 500px;
+    .hire-btn {
+        margin-top: 10px;
     }
 
-    .skills .left .info h3{
-        font-size: 22px;
-    }
-
-    .skills .left .info p{
-        font-size: 12px;
-    }
-
-    footer{
-        margin-top: 150px;
-    }
-
-    footer .start{
-        width: 90%;
-        left: 5%;
-        top: -20%;
-    }
-
-    footer .cols{
-        flex-wrap: wrap;
-    }
-
-    footer .cols .about-col{
-        flex-basis: 50%;
-    }
-
-    footer .cols .links-col{
-        flex-basis: 50%;
-    }
-
-    footer .cols .news-col{
-        flex-basis: 50%;
-    }
-
-}
-
-@media screen and (max-width: 780px) {
-    
-    .navbar button{
-        display: none;
-    }
-
-    .main h4{
+    .main h4 {
         font-size: 24px;
     }
 
-    .main p.title{
-        font-size: 36px;
-    }
-
-    .main p.subtitle{
-        font-size: 14px;
-    }
-
-    .guarantee .item{
-        flex-basis: 100%;
-    }
-
-    .about{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-}
-
-@media screen and (max-width: 650px) {
-    
-    .navbar{
-        justify-content: center;
-    }
-
-    .navbar h2{
-        display: none;
-    }
-
-    .navbar ul li a{
-        font-size: 14px;
-    }
-
-    .main{
-        margin-top: 50px;
-        height: 320px;
-        justify-content: start;
-    }
-
-    .main h4{
-        font-size: 20px;
-    }
-
-    .main p.title{
+    .main p.title {
         font-size: 28px;
     }
 
-    .main p.subtitle{
-        font-size: 12px;
+    .guarantee {
+        flex-direction: column;
+        padding: 0 20px;
     }
 
-    .main img{
-        margin-top: 40px;
-        width: 150px;
-        height: 150px;
+    .about-container {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
     }
 
-    .skills{
-        flex-wrap: wrap;
-        justify-content: center;
-    }
-
-    .skills .right{
-        justify-content: space-between;
-    }
-
-    .skills .left .info h3{
-        font-size: 20px;
-    }
-
-    footer .start{
-        top: -8%;
-    }
-
-    footer .start p{
-        display: none;
-    }
-
-    footer .cols .about-col{
-        flex-basis: 100%;
-        margin-bottom: 40px;
-    }
-
-    footer .cols .links-col{
-        flex-basis: 100%;
+    .about {
+        flex-direction: column;
+        text-align: center;
+        gap: 10px;
+        padding: 20px;
+        background-color: rgba(128, 128, 128, 0.219);
+        border-radius: 20px;
+        width: 100%;
+        max-width: 600px;
         margin-bottom: 20px;
     }
 
-    footer .cols .news-col{
-        flex-basis: 100%;
+    .skills {
+        width: 100%;
+        padding: 20px 20px;
     }
 
+    footer .cols {
+        flex-direction: column;
+        align-items: center;
+        padding: 0 20px;
+    }
+
+    footer .start {
+        padding: 20px;
+        margin-bottom: 20px;
+    }
 }
 
-@media screen and (max-width: 480px) {
-    
-    .main p.title{
-        font-size: 18px;
+@media (max-width: 480px) {
+    .navbar {
+        padding: 0 10px;
     }
 
-    .main p.subtitle{
-        font-size: 10px;
-    }
-
-    .guarantee .item .info h3{
+    .main h4 {
         font-size: 20px;
     }
 
-    .guarantee .item .info p{
-        font-size: 12px;
+    .main p.title {
+        font-size: 24px;
     }
 
+    .main p.subtitle {
+        font-size: 14px;
+    }
+
+    .guarantee .item {
+        padding: 0 10px;
+    }
+
+    .about img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .skills .right .item {
+        width: 50px;
+        height: 50px;
+        padding: 10px;
+    }
+
+    footer .cols .about-col, footer .cols .links-col, footer .cols .news-col {
+        min-width: 100%;
+    }
+
+    footer .start {
+        padding: 20px;
+    }
 }
+
+
 /* Add CSS for the fade-in effect */
 /* .fade-in {
     opacity: 0;
@@ -649,7 +596,7 @@ footer .cols .news-col form button i{
     transition: color 2s ease-in-out, transform 2s ease-in-out;
   }
   
-  .links-col a:hover {
+.links-col a:hover {
     color: #ffb742 !important;
     transform: scale(1.2);
-  } */
+} */

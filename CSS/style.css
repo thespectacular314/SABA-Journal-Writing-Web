@@ -257,8 +257,12 @@ body{
     width: 35%;
     height: 35%;
 }
-.about .info {
+.about {
     text-align: center;
+    transition: box-shadow 0.3s;
+}
+.about:hover {
+    box-shadow: 0 0 12px rgba(177, 144, 1, 0.5); /* Add shadow when hovering */
 }
 
 .about .info h3{
